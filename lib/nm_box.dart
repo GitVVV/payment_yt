@@ -21,7 +21,7 @@ BoxDecoration nMbox = BoxDecoration(
       offset: Offset(-10, -10),
       blurRadius: 10,
     ),
-  ]
+  ],
 );
 
 BoxDecoration nMboxInvert = BoxDecoration(
@@ -32,9 +32,9 @@ BoxDecoration nMboxInvert = BoxDecoration(
       color: mCL,
       offset: Offset(3, 3),
       blurRadius: 3,
-      spreadRadius: -3
+      spreadRadius: -3,
     ),
-  ]
+  ],
 );
 
 BoxDecoration nMboxInvertActive = nMboxInvert.copyWith(color: mCC);
@@ -47,6 +47,6 @@ BoxDecoration nMbtn = BoxDecoration(
       color: mCD,
       offset: Offset(2, 2),
       blurRadius: 2,
-    )
-  ]
+    ),
+  ],
 );

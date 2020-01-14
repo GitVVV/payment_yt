@@ -40,7 +40,10 @@ class MainCard extends StatelessWidget {
             Text(
               'Main Card',
               style: TextStyle(
-                  color: fCD, fontSize: 30, fontWeight: FontWeight.w700),
+                color: fCD,
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+              ),
             ),
             CreditCard(),
             NMCard(
@@ -79,7 +82,7 @@ class MainCard extends StatelessWidget {
                   icon: Icons.notifications_none,
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
@@ -100,8 +103,22 @@ class _TransactionSliderState extends State<TransactionSlider> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text('Transaction Limit', style: TextStyle(color: fCD, fontSize: 16, fontWeight: FontWeight.w500),),
-            Text('€ ' + transLimit.toStringAsFixed(0), style: TextStyle(color: fCD, fontSize: 16, fontWeight: FontWeight.w700),)
+            Text(
+              'Transaction Limit',
+              style: TextStyle(
+                color: fCD,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            Text(
+              '€ ' + transLimit.toStringAsFixed(0),
+              style: TextStyle(
+                color: fCD,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
           ],
         ),
         SliderTheme(
@@ -116,7 +133,7 @@ class _TransactionSliderState extends State<TransactionSlider> {
             value: transLimit,
             min: 1,
             max: 3000,
-            onChanged: (limitInput){
+            onChanged: (limitInput) {
               setState(() {
                 transLimit = limitInput;
               });
@@ -139,18 +156,56 @@ class CreditCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text('VISA', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
-              Icon(Icons.more_horiz, color: fCD,),
+              Text(
+                'VISA',
+                style: TextStyle(
+                  color: fCD,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Icon(
+                Icons.more_horiz,
+                color: fCD,
+              ),
             ],
           ),
           SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text('* * * *', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
-              Text('* * * *', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
-              Text('* * * *', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
-              Text('8014', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
+              Text(
+                '* * * *',
+                style: TextStyle(
+                  color: fCD,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Text(
+                '* * * *',
+                style: TextStyle(
+                  color: fCD,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Text(
+                '* * * *',
+                style: TextStyle(
+                  color: fCD,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Text(
+                '8014',
+                style: TextStyle(
+                  color: fCD,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ],
           ),
           SizedBox(height: 25),
@@ -160,19 +215,47 @@ class CreditCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Card Holder', style: TextStyle(color: fCL, fontSize: 12, fontWeight: FontWeight.w700)),
-                  Text('Lindsey Johnson', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
+                  Text(
+                    'Card Holder',
+                    style: TextStyle(
+                      color: fCL,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    'Lindsey Johnson',
+                    style: TextStyle(
+                      color: fCD,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Expires', style: TextStyle(color: fCL, fontSize: 12, fontWeight: FontWeight.w700)),
-                  Text('08 / 21', style: TextStyle(color: fCD, fontSize: 18, fontWeight: FontWeight.w700)),
+                  Text(
+                    'Expires',
+                    style: TextStyle(
+                      color: fCL,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    '08 / 21',
+                    style: TextStyle(
+                      color: fCD,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ],
               ),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -182,7 +265,9 @@ class CreditCard extends StatelessWidget {
 class NMButton extends StatelessWidget {
   final bool down;
   final IconData icon;
+
   const NMButton({this.down, this.icon});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -201,7 +286,9 @@ class NMCard extends StatelessWidget {
   final bool active;
   final IconData icon;
   final String label;
+
   const NMCard({this.active, this.icon, this.label});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -214,7 +301,10 @@ class NMCard extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
-                color: fCD, fontWeight: FontWeight.w700, fontSize: 16),
+              color: fCD,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ),
           ),
           Spacer(),
           Container(
@@ -222,9 +312,7 @@ class NMCard extends StatelessWidget {
             width: 70,
             height: 40,
             child: Container(
-              margin: active
-                  ? EdgeInsets.fromLTRB(35, 5, 5, 5)
-                  : EdgeInsets.fromLTRB(5, 5, 35, 5),
+              margin: active ? EdgeInsets.fromLTRB(35, 5, 5, 5) : EdgeInsets.fromLTRB(5, 5, 35, 5),
               decoration: nMbtn,
             ),
           ),
